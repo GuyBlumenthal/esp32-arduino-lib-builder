@@ -7,7 +7,7 @@ source ./tools/config.sh
 #
 echo "Updating ESP32 Arduino..."
 if [ ! -d "$AR_COMPS/arduino" ]; then
-	git clone --branch $AR_BRANCH --single-branch $AR_REPO_URL "$AR_COMPS/arduino"
+	git clone --depth 1 --branch $AR_BRANCH --single-branch $AR_REPO_URL "$AR_COMPS/arduino"
 fi
 
 if [ "$AR_BRANCH" ]; then
